@@ -17,19 +17,15 @@ public class View implements Disposable {
         this.width = width;
         this.height = height;
     }
-
     public View(float x, float y) {
         this.x = x;
         this.y = y;
     }
-
     public boolean isHit(float tx, float ty) {
         return (tx >= x && tx <= x + width && ty >= y && ty <= y + height);
     }
-
     public void draw(SpriteBatch batch) {
     }
-
     @Override
     public void dispose() {
     }

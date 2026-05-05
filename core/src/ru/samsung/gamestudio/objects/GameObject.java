@@ -20,7 +20,6 @@ public class GameObject {
 
     public Body body;
     Texture texture;
-
     GameObject(String texturePath, int x, int y, int width, int height, short cBits, World world) {
         this.width = width;
         this.height = height;
@@ -29,7 +28,6 @@ public class GameObject {
         texture = new Texture(texturePath);
         body = createBody(x, y, world);
     }
-
     public void draw(SpriteBatch batch) {
         batch.draw(texture,
                 getX() - (width / 2f),

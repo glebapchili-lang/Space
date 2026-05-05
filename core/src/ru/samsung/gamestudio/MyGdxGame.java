@@ -19,29 +19,22 @@ import ru.samsung.gamestudio.screens.SkinScreen;
 import static ru.samsung.gamestudio.GameSettings.*;
 
 public class MyGdxGame extends Game {
-
     public World world;
-
     public BitmapFont largeWhiteFont;
     public BitmapFont commonWhiteFont;
     public BitmapFont commonBlackFont;
-
     public Vector3 touch;
     public SpriteBatch batch;
     public OrthographicCamera camera;
     public AudioManager audioManager;
-
     public GameScreen gameScreen;
     public MenuScreen menuScreen;
     public SettingsScreen settingsScreen;
 
     public SkinScreen skinScreen;
-
     float accumulator = 0;
-
     @Override
     public void create() {
-
         Box2D.init();
         world = new World(new Vector2(0, 0), true);
 
@@ -53,7 +46,6 @@ public class MyGdxGame extends Game {
         camera = new OrthographicCamera();
         camera.setToOrtho(false, GameSettings.SCREEN_WIDTH, GameSettings.SCREEN_HEIGHT);
         audioManager = new AudioManager();
-
         gameScreen = new GameScreen(this);
         menuScreen = new MenuScreen(this);
         settingsScreen = new SettingsScreen(this);
@@ -61,7 +53,6 @@ public class MyGdxGame extends Game {
 
         setScreen(menuScreen);
     }
-
     @Override
     public void dispose() {
         batch.dispose();

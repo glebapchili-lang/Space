@@ -7,14 +7,11 @@ import com.badlogic.gdx.utils.Json;
 import java.util.ArrayList;
 
 public class MemoryManager {
-
     private static final Preferences preferences = Gdx.app.getPreferences("User saves");
-
     public static void saveSoundSettings(boolean isOn) {
         preferences.putBoolean("isSoundOn", isOn);
         preferences.flush();
     }
-
     public static boolean loadIsSoundOn() {
         return preferences.getBoolean("isSoundOn", true);
     }
@@ -23,11 +20,9 @@ public class MemoryManager {
         preferences.putBoolean("isMusicOn", isOn);
         preferences.flush();
     }
-
     public static boolean loadIsMusicOn() {
         return preferences.getBoolean("isMusicOn", true);
     }
-
     public static void saveTableOfRecords(ArrayList<Integer> table) {
 
         Json json = new Json();

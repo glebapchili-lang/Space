@@ -7,11 +7,8 @@ import ru.samsung.gamestudio.GameSettings;
 import java.util.Random;
 
 public class TrashObject extends GameObject {
-
     private static final int paddingHorizontal = 30;
-
     private int livesLeft;
-
     public TrashObject(int width, int height, String texturePath, World world) {
         super(
                 texturePath,
